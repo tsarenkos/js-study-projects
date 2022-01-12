@@ -5,9 +5,7 @@ function treeSum(mas) {
         for (let i = 0; i < mas.length; i++) {
             let value = Array.isArray(mas[i]) ? treeSum(mas[i]) : mas[i];
 
-            if (typeof (value) === "number" && !Number.isNaN(value)) {
-                result += value;
-            }
+            result += value;
         }
 
         return result;
